@@ -7,7 +7,7 @@
 	</div>
 	<ng-template #consultantList>
 		<div *ngFor="let consultant of consultants">
-			{{ consultant.name }}
+			<consultant [name]="consultant.name"></consultant>
 		</div>	
 	</ng-template>
 </div>

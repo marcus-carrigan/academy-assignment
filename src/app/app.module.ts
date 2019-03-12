@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ConsultantListComponent } from './consultant-list/consultant-list.component'
+import { ConsultantComponent } from './consultant/consultant.component';
 
 
 
@@ -16,7 +17,8 @@ import { ConsultantListComponent } from './consultant-list/consultant-list.compo
   declarations: [
     AppComponent,
     HeaderComponent,
-    ConsultantListComponent
+    ConsultantListComponent,
+    ConsultantComponent
   ],
   imports: [
     BrowserModule,
