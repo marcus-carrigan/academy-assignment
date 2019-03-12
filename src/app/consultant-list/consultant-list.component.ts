@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ConsultantApiService } from '../consultant-api.service';
+import { Consultant } from '../consultant';
+
 @Component({
   selector: 'app-consultant-list',
   templateUrl: './consultant-list.component.html',
@@ -7,10 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultantListComponent implements OnInit {
 
-  constructor() { }
+  consultants: Consultant[] = [];
+
+  constructor(private consultantApiService: ConsultantApiService) { }
 
   ngOnInit() {
-    console.log("ConsultantListComponent initialised");
+    this.getConsultants();
+  }
+
+  getConsultants(): void {
+    this.consultantApiService.getConsultants()
+      .subscribe(consultants => this.consultants = consultants);
   }
 
 }
