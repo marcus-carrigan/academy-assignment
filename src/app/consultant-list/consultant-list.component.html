@@ -2,7 +2,12 @@
 	<h3>
 		Consultants
 	</h3>
-	<div>
-		To be implemented	
+	<div *ngIf="!consultants || consultants.length === 0; else consultantList">
+		Loading...
 	</div>
+	<ng-template #consultantList>
+		<div *ngFor="let consultant of consultants">
+			{{ consultant.name }}
+		</div>	
+	</ng-template>
 </div>
