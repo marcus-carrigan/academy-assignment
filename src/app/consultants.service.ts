@@ -25,8 +25,9 @@ export class ConsultantsService {
     new Consultant(15,'Lucine Shahgholian'),
     new Consultant(16,'Anatoli Vahterovs'),
   ]
-
+  
+  /*
   getConsultants(): Consultant[] {
-    return this.consultants
-  }
+    // Implement this!
+  }*/
 }
